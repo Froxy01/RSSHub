@@ -74,7 +74,7 @@ RUN \
     # rm -rf /app/node_modules /app/scripts && \
     # mv /app/app-minimal/node_modules /app/ && \
     # rm -rf /app/app-minimal && \
-    npm run build && \
+    # npm run build && \
     ls -la /app && \
     du -hd1 /app
 
