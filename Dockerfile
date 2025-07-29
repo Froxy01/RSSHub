@@ -52,7 +52,7 @@ FROM node:22-bookworm-slim AS docker-minifier
 WORKDIR /app
 # COPY --from=dep-version-parser /ver/* /minifier/
 
-# ARG USE_CHINA_NPM_REGISTRY=0
+# ARG USE_CHINA__REGISTRY=0
 # RUN \
 #     set -ex && \
 #     if [ "$USE_CHINA_NPM_REGISTRY" = 1 ]; then \
@@ -74,7 +74,7 @@ RUN \
     # rm -rf /app/node_modules /app/scripts && \
     # mv /app/app-minimal/node_modules /app/ && \
     # rm -rf /app/app-minimal && \
-    # npm run build && \
+    npm run build && \
     ls -la /app && \
     du -hd1 /app
 
